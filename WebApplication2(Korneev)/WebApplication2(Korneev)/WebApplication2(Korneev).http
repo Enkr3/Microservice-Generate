@@ -1,6 +1,0 @@
-@WebApplication2_Korneev__HostAddress = http://localhost:5085
-
-GET {{WebApplication2_Korneev__HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
