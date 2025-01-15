@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Взаимодействие с микросервисами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        input {
+            width: calc(100% - 2rem);
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        pre {
+            background: #f9f9f9;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4caf50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Функция для работы с GenerateNames API
+        async function fetchProjectNames() {
+            const quantity = document.getElementById("quantity").value || 5;
+            try {
+                const response = await fetch(`/api/ProjectName/GenerateNames?quantity=${quantity}`);
+                const data = await response.json();
+                document.getElementById("namesOutput").innerText = data.join("\n");
+            } catch (error) {
+                document.getElementById("namesOutput").innerText = "Ошибка при получении списка проектов.";
+                console.error("Ошибка при получении списка проектов:", error);
+            }
+        }
+
+        // Функция для работы с GeneratePassword API
+        async function fetchPasswords() {
+            const length = document.getElementById("passwordLength").value || 8;
+            const quantity = document.getElementById("passwordQuantity").value || 1;
+            try {
+                const response = await fetch(`/api/Data/GeneratePassword?length=${length}&quantity=${quantity}`);
+                const data = await response.json();
+                document.getElementById("passwordsOutput").innerText = data.join("\n");
+            } catch (error) {
+                document.getElementById("passwordsOutput").innerText = "Ошибка при получении паролей.";
+                console.error("Ошибка при получении паролей:", error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Взаимодействие с микросервисами</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Генерация названий проектов</h2>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" placeholder="Введите количество (по умолчанию 5)">
+            <button onclick="fetchProjectNames()">Сгенерировать названия</button>
+            <pre id="namesOutput">Здесь появятся названия проектов...</pre>
+        </section>
+
+        <section>
+            <h2>Генерация паролей</h2>
+            <label for="passwordLength">Длина пароля:</label>
+            <input type="number" id="passwordLength" placeholder="Введите длину (по умолчанию 8)">
+            <label for="passwordQuantity">Количество:</label>
+            <input type="number" id="passwordQuantity" placeholder="Введите количество (по умолчанию 1)">
+            <button onclick="fetchPasswords()">Сгенерировать пароли</button>
+            <pre id="passwordsOutput">Здесь появятся сгенерированные пароли...</pre>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Панель микросервисов
+    </footer>
+</body>
+</html>

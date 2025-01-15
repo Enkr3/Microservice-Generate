@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Учёба\\ТПЦР\\2 семак\\Korneev\\Microservice-Generate-main\\WebApplication2(Korneev)\\WebApplication2(Korneev)\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebApplication2(Korneev).Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WebApplication2(Korneev).props",
+      "PackagePath": "build\\WebApplication2(Korneev).props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication2(Korneev).props",
+      "PackagePath": "buildMultiTargeting\\WebApplication2(Korneev).props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WebApplication2(Korneev).props",
+      "PackagePath": "buildTransitive\\WebApplication2(Korneev).props"
+    }
+  ],
+  "ElementsToRemove": []
+}

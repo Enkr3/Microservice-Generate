@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "AyHS8qhmtMNxH2gmDWVMY6qiF6QNyS6d886szYSAnm0=",
+  "Source": "WebApplication2(Korneev)",
+  "BasePath": "_content/WebApplication2(Korneev)",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication2(Korneev)\\wwwroot",
+      "Source": "WebApplication2(Korneev)",
+      "ContentRoot": "D:\\Учёба\\ТПЦР\\2 семак\\Korneev\\Microservice-Generate-main\\WebApplication2(Korneev)\\WebApplication2(Korneev)\\wwwroot\\",
+      "BasePath": "_content/WebApplication2(Korneev)",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Учёба\\ТПЦР\\2 семак\\Korneev\\Microservice-Generate-main\\WebApplication2(Korneev)\\WebApplication2(Korneev)\\wwwroot\\index.html",
+      "SourceId": "WebApplication2(Korneev)",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Учёба\\ТПЦР\\2 семак\\Korneev\\Microservice-Generate-main\\WebApplication2(Korneev)\\WebApplication2(Korneev)\\wwwroot\\",
+      "BasePath": "_content/WebApplication2(Korneev)",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
